@@ -98,7 +98,6 @@ public class JavaHttpClientExceptionHandlingUnitTest {
                 .get(WireMock.anyUrl())
                 .willReturn(WireMock
                         .aResponse().
-                        //withStatus(500).withFixedDelay(61000)
                                 withFault(Fault.CONNECTION_RESET_BY_PEER)
                 ));
         logger.debug(CONNECTION_RESET_BY_PEER_CONFIG_MSG);

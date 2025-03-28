@@ -9,7 +9,7 @@ Demonstrates automatic establishment of new connections by HttpClient on excepti
 ## Logging samples
 
 ### For HttpTimeoutException (configured for 30s)
-See [related code](https://github.com/haqer1/java-http-client-demo/blob/e2af4103e4120206283aa1fb79570ca33f7d747c/app/src/test/java/com/adazes/java/net/http/client/JavaHttpClientExceptionHandlingUnitTest.java#L140).
+See [related code](https://github.com/haqer1/java-http-client-demo/blob/9d83bba504aca9e2bef475d31c18966eecb5f59c/app/src/test/java/com/adazes/java/net/http/client/JavaHttpClientExceptionHandlingUnitTest.java#L138).
 ```text
 11:04:38.188 [Test worker] DEBUG c.a.j.n.h.c.JavaHttpClientExceptionHandlingUnitTest - WireMock pre-configured for TIMEOUT.
 11:04:38.356 [qtp1140202235-32] DEBUG o.e.jetty.server.HttpConnection - New HTTP Connection HttpConnection@6f73e799::NetworkTrafficSocketChannelEndPoint@5ceff12c[{l=/127.0.0.1:37099,r=/127.0.0.1:35198,OPEN,fill=-,flush=-,to=98/30000}{io=0/0,kio=0,kro=0}]->[<null>]
@@ -22,7 +22,7 @@ See [related code](https://github.com/haqer1/java-http-client-demo/blob/e2af4103
 ```
 
 ### For IOException (testable on Linux (not tested on Windows & Mac))
-See [related code](https://github.com/haqer1/java-http-client-demo/blob/e2af4103e4120206283aa1fb79570ca33f7d747c/app/src/test/java/com/adazes/java/net/http/client/JavaHttpClientExceptionHandlingUnitTest.java#L93).
+See [related code](https://github.com/haqer1/java-http-client-demo/blob/9d83bba504aca9e2bef475d31c18966eecb5f59c/app/src/test/java/com/adazes/java/net/http/client/JavaHttpClientExceptionHandlingUnitTest.java#L93).
 ```text
 11:05:08.858 [Test worker] DEBUG c.a.j.n.h.c.JavaHttpClientExceptionHandlingUnitTest - WireMock pre-configured for RESET.
 11:05:08.874 [qtp1579015748-45] DEBUG o.e.jetty.server.HttpConnection - New HTTP Connection HttpConnection@39f1f56e::NetworkTrafficSocketChannelEndPoint@3dce7688[{l=/127.0.0.1:33647,r=/127.0.0.1:33458,OPEN,fill=-,flush=-,to=8/30000}{io=0/0,kio=0,kro=0}]->[<null>]
