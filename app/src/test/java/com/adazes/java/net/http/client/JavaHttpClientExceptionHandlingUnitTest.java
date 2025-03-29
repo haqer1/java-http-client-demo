@@ -19,6 +19,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpTimeoutException;
+import java.text.MessageFormat;
 import java.time.Duration;
 import java.util.List;
 
@@ -38,7 +39,8 @@ public class JavaHttpClientExceptionHandlingUnitTest {
 
     private final static byte READ_TIMEOUT_SECONDS = 30;
     private final static int READ_TIMEOUT_DELAY_MS = 60000;
-    private final static String CONNECTION_READ_TIMEOUT_CONFIG_MSG = "WireMock pre-configured for TIMEOUT.";
+    private final static String CONNECTION_READ_TIMEOUT_CONFIG_MSG = MessageFormat.format(
+            "WireMock pre-configured for TIMEOUT ({0} seconds).", READ_TIMEOUT_SECONDS);
     private final static String CONNECTION_READ_TIMEOUT_DONE_MSG = "Making assertions & exiting from TIMEOUT test.";
 
     private final WireMockConfiguration mockConfiguration = WireMockConfiguration.options().dynamicPort();
